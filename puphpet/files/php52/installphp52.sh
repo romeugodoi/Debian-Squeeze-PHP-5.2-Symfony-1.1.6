@@ -6,4 +6,4 @@ sudo cp /var/www/puphpet/files/php52/lenny /etc/apt/preferences.d/
 sudo apt-get remove -y --purge php5\*
 sudo apt-get update
 sudo apt-get clean
-sudo apt-get -y install libapache2-mod-php5 php5 php5-cli php5-common php5-curl php5-dev php5-gd php5-mcrypt php5-mysql php5-xsl
+sudo apt-get -y install libapache2-mod-php5 php5 php5-cli php5-common php5-curl php5-dev php5-gd php5-mcrypt php5-mysql php5-xsl php5-pgsql
