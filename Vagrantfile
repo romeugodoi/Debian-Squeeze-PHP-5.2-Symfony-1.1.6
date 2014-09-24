@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
   config.vm.box = "#{data['vm']['box']}"
   config.vm.box_url = "#{data['vm']['box_url']}"
 
+  # Set the Timezone to something useful
+  config.vm.provision :shell, :inline => "echo \"UTC-3\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+
   if data['vm']['hostname'].to_s != ''
     config.vm.hostname = "#{data['vm']['hostname']}"
   end
